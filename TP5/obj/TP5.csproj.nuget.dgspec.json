@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {}
+    "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {
+    "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
+        "projectUniqueName": "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
         "projectName": "TP5",
-        "projectPath": "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
+        "projectPath": "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\obj\\",
+        "outputPath": "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
