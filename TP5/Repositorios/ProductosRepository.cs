@@ -1,18 +1,20 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.Data.Sqlite;
 using EspacioTp5;
+using Microsoft.Data.Sqlite;
 
 namespace rapositoriosTP5
 {
     public class ProductoRepository : IProductoRepository
     {
-        private string cadenaConexion = "Data Source=DB/productos.db;Cache=Shared";
+        private string cadenaConexion =
+            @"Data Source=C:\Users\castr\OneDrive\tpsTaller\tl2-tp5-2024-Days45\TP5\DB\tienda.db;Cache=Shared";
 
         // Crear un nuevo Producto (recibe un objeto Producto)
         public void CrearProducto(Productos producto)
         {
-            var query = "INSERT INTO productos (idProducto, descripcion, precio) VALUES (@idProducto, @descripcion, @precio)";
+            var query =
+                "INSERT INTO productos (idProducto, descripcion, precio) VALUES (@idProducto, @descripcion, @precio)";
             using (var connection = new SqliteConnection(cadenaConexion))
             {
                 connection.Open();
@@ -30,7 +32,8 @@ namespace rapositoriosTP5
         // Modificar un Producto existente (recibe un Id y un objeto Producto)
         public void ModificarProducto(int id, Productos producto)
         {
-            var query = "UPDATE productos SET descripcion = @descripcion, precio = @precio WHERE idProducto = @idProducto";
+            var query =
+                "UPDATE productos SET descripcion = @descripcion, precio = @precio WHERE idProducto = @idProducto";
             using (var connection = new SqliteConnection(cadenaConexion))
             {
                 connection.Open();

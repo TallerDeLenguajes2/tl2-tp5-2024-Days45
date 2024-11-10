@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
-using EspacioTp5;
-using rapositoriosTP5;
 using System.Collections.Generic;
+using EspacioTp5;
+using Microsoft.AspNetCore.Mvc;
+using rapositoriosTP5;
 
 namespace TiendaAPI.Controllers
 {
@@ -21,7 +21,11 @@ namespace TiendaAPI.Controllers
         public ActionResult CrearProducto([FromBody] Productos producto)
         {
             _repositorio.CrearProducto(producto);
-            return CreatedAtAction(nameof(ListarProductos), new { id = producto.IdProducto }, producto);
+            return CreatedAtAction(
+                nameof(ListarProductos),
+                new { id = producto.IdProducto },
+                producto
+            );
         }
 
         // GET /api/Producto: Permite listar los Productos existentes.
@@ -43,11 +47,14 @@ namespace TiendaAPI.Controllers
             }
 
             // Como los set son privados, se debe usar un método adecuado para modificar el producto.
-            var productoModificado = new Productos(producto.IdProducto, nuevoNombre, producto.Precio);
+            var productoModificado = new Productos(
+                producto.IdProducto,
+                nuevoNombre,
+                producto.Precio
+            );
             _repositorio.ModificarProducto(id, productoModificado);
 
             return Ok(productoModificado);
         }
     }
 }
-

@@ -7,7 +7,7 @@ namespace rapositoriosTP5
 {
     public class PresupuestosRepository : IPresupuestoRepository
     {
-        private string cadenaConexion = "Data Source=DB/presupuestos.db;Cache=Shared";
+        private string cadenaConexion = "Data Source=DB/tienda.db;Cache=Shared";
 
         // Crear un nuevo Presupuesto (recibe un objeto Presupuesto)
         public void CrearPresupuesto(Presupuestos presupuesto)

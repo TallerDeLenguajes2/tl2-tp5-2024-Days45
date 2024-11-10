@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {}
+    "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {}
   },
   "projects": {
-    "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {
+    "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
+        "projectUniqueName": "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
         "projectName": "TP5",
-        "projectPath": "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\obj\\",
+        "projectPath": "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
+        "packagesPath": "C:\\Users\\castr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\castr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.Data.SQLite": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -71,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
