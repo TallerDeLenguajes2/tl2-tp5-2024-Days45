@@ -9,21 +9,27 @@
 ■ CantidadProductos ()
 */
 using System;
-
+using System.Text.Json.Serialization;
 namespace EspacioTp5;
 
 public class Presupuestos
 {
-    public Presupuestos(int idPresupuesto,string nombreDestinatario,List<PresupuestosDetalle> detalles = null)
+    [JsonConstructor]
+    public Presupuestos(int idPresupuesto, string nombreDestinatario, DateTime fechaCreacion, List<PresupuestosDetalle> detalle = null)
     {
         IdPresupuesto = idPresupuesto;
         NombreDestinatario = nombreDestinatario;
-        Detalle = detalles ?? new List<PresupuestosDetalle>();
+        FechaCreacion = fechaCreacion;  // Aquí se pasa la fecha al crear el presupuesto
+        Detalle = detalle ?? new List<PresupuestosDetalle>();
     }
-
+    [JsonPropertyName("idPresupuesto")]
     public int IdPresupuesto { get; private set; }
+    [JsonPropertyName("nombreDestinatario")]
     public string NombreDestinatario { get; private set; }
+    [JsonPropertyName("detalle")]
     public List<PresupuestosDetalle> Detalle { get; private set; }
+    [JsonPropertyName("fechaCreacion")]
+    public DateTime FechaCreacion { get; private set; } // Nueva propiedad
 
     public double MontoPresupuesto()
     {
@@ -43,11 +49,6 @@ public class Presupuestos
 
     public int CantidadProductos()
     {
-        int contador = 0;
-        foreach (var item in Detalle)
-        {
-            contador += item.Cantidad;
-        }
-        return contador;
+        return Detalle.Count();
     }
 }

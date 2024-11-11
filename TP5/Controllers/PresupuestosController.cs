@@ -10,12 +10,12 @@ namespace TP5.Controllers
     [Route("[controller]")]
     public class PresupuestoController : ControllerBase
     {
-        private readonly PresupuestosRepository _presupuestosRepository;
+        private readonly IPresupuestoRepository _presupuestoRepository;
 
-        // Constructor que crea el repositorio de presupuestos
-        public PresupuestoController()
+        // Inyección de dependencias en el constructor
+        public PresupuestoController(IPresupuestoRepository presupuestoRepository)
         {
-            _presupuestosRepository = new PresupuestosRepository();  // Si es necesario, este repositorio puede ser inyectado
+            _presupuestoRepository = presupuestoRepository;
         }
 
         // POST /api/Presupuesto: Crear un nuevo presupuesto
@@ -26,11 +26,9 @@ namespace TP5.Controllers
             {
                 return BadRequest("El presupuesto no puede ser nulo.");
             }
-
             try
             {
-                // Llamada al repositorio para crear el presupuesto
-                _presupuestosRepository.CrearPresupuesto(presupuesto);
+                _presupuestoRepository.CrearPresupuesto(presupuesto);
                 return CreatedAtAction(nameof(ObtenerPresupuesto), new { id = presupuesto.IdPresupuesto }, presupuesto);
             }
             catch (Exception ex)
@@ -38,7 +36,6 @@ namespace TP5.Controllers
                 return StatusCode(500, $"Error al crear presupuesto: {ex.Message}");
             }
         }
-
         // POST /api/Presupuesto/{id}/ProductoDetalle: Agregar un producto y cantidad al presupuesto
         [HttpPost("{id}/ProductoDetalle")]
         public IActionResult AgregarProductoAPresupuesto(int id, [FromBody] PresupuestosDetalle detalle)
@@ -50,19 +47,16 @@ namespace TP5.Controllers
 
             try
             {
-                // Aquí se asume que el producto existe en el sistema y ya tiene los datos necesarios
-                var presupuesto = _presupuestosRepository.ObtenerPresupuesto(id);
-
+                var presupuesto = _presupuestoRepository.ObtenerPresupuesto(id);
                 if (presupuesto == null)
                 {
                     return NotFound($"Presupuesto con id {id} no encontrado.");
                 }
 
-                // Se agrega el producto al presupuesto
-                presupuesto.Detalle.Add(detalle);
-                // Nota: La base de datos también debería ser actualizada para reflejar esta adición si es necesario.
-                _presupuestosRepository.AgregarProductoAPresupuesto(id, detalle.Producto, detalle.Cantidad);
-                
+                // Agregar el producto al presupuesto a través del repositorio
+                _presupuestoRepository.AgregarProductoAPresupuesto(id, detalle.Producto, detalle.Cantidad);
+
+                // No es necesario modificar la lista del objeto presupuesto, ya que lo estamos haciendo en el repositorio.
                 return NoContent(); // 204 No Content, operación exitosa sin retorno de contenido.
             }
             catch (Exception ex)
@@ -77,7 +71,7 @@ namespace TP5.Controllers
         {
             try
             {
-                var presupuestos = _presupuestosRepository.ListarPresupuestos();
+                var presupuestos = _presupuestoRepository.ListarPresupuestos();
                 return Ok(presupuestos);
             }
             catch (Exception ex)
@@ -92,7 +86,7 @@ namespace TP5.Controllers
         {
             try
             {
-                var presupuesto = _presupuestosRepository.ObtenerPresupuesto(id);
+                var presupuesto = _presupuestoRepository.ObtenerPresupuesto(id);
                 if (presupuesto == null)
                 {
                     return NotFound($"Presupuesto con id {id} no encontrado.");

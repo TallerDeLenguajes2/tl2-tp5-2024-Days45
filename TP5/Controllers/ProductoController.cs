@@ -45,8 +45,6 @@ namespace TiendaAPI.Controllers
             {
                 return NotFound();
             }
-
-            // Como los set son privados, se debe usar un método adecuado para modificar el producto.
             var productoModificado = new Productos(
                 producto.IdProducto,
                 nuevoNombre,

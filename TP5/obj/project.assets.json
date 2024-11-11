@@ -1273,19 +1273,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\castr\\.nuget\\packages\\": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
       "projectName": "TP5",
-      "projectPath": "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
-      "packagesPath": "C:\\Users\\castr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\castr\\OneDrive\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\obj\\",
+      "projectPath": "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\TP5.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pc\\OneDrive\\tpTaller\\tpsTaller\\tl2-tp5-2024-Days45\\TP5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\castr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1346,7 +1346,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

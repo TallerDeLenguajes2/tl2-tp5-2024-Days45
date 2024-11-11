@@ -7,8 +7,7 @@ namespace rapositoriosTP5
 {
     public class ProductoRepository : IProductoRepository
     {
-        private string cadenaConexion =
-            @"Data Source=C:\Users\castr\OneDrive\tpsTaller\tl2-tp5-2024-Days45\TP5\DB\tienda.db;Cache=Shared";
+        private string cadenaConexion ="Data Source=DB/tienda.db;Cache=Shared";
 
         // Crear un nuevo Producto (recibe un objeto Producto)
         public void CrearProducto(Productos producto)
